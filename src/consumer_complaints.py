@@ -24,5 +24,5 @@ for group, frame in df2.groupby(['Year','Product']):
         df3=df3.append({'Year and Product':group[0]+" " + group[1],'No. of complains':no_complains,'No. of companies':no_companies,'Highest % of complaints for single company':max(counts)/sum(counts)*100},ignore_index=True)
         #print(df3)
     i+=1
-df3.to_csv('./report.csv', index=True,mode='a')
+df3.to_csv('./output/report.csv', index=True,mode='a')
     #print(df3) #Not saving correctly; only saves last entry
