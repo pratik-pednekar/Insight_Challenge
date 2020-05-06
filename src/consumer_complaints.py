@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('./complaints.csv', error_bad_lines=False,encoding="ISO-8859-1",usecols=['Date received','Product','Company'])
+df1 = pd.read_csv('./complaints.csv', error_bad_lines=False,encoding="ISO-8859-1",usecols=['Date received','Product','Company'])
 df2=df1.copy()
 df2['Year']=df2['Date received'].str.split("-", n = 1, expand = True)[0]
 df2=df2.drop('Date received',axis=1) #dropping date received
